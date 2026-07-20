@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\DuoNotes.Application\DuoNotes.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.10" />
+
+    <!-- transitive pinning: EF Core Sqlite ลาก SQLitePCLRaw.lib.e_sqlite3 2.1.11 มาด้วย
+         ซึ่งมีช่องโหว่ GHSA-2m69-gcr7-jv3q — บังคับใช้ 2.1.12 ที่แก้แล้วแทน -->
+    <PackageReference Include="SQLitePCLRaw.lib.e_sqlite3" Version="2.1.12" />
+  </ItemGroup>
+
+  <!-- TargetFramework / Nullable / ImplicitUsings อยู่ที่ Directory.Build.props แล้ว -->
+
+</Project>

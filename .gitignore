@@ -1,0 +1,32 @@
+## Build output
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+artifacts/
+
+## IDE
+.vs/
+.vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/extensions.json
+.idea/
+*.user
+*.suo
+
+## SQLite database (ห้าม commit ข้อมูลจริงขึ้น git)
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+## ค่า config ที่มีความลับ (connection string จริง, API key)
+appsettings.*.local.json
+secrets.json
+
+## Misc
+*.log
+.DS_Store
+Thumbs.db

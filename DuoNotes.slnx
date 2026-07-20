@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/DuoNotes.Api/DuoNotes.Api.csproj" />
+    <Project Path="src/DuoNotes.Application/DuoNotes.Application.csproj" />
+    <Project Path="src/DuoNotes.Domain/DuoNotes.Domain.csproj" />
+    <Project Path="src/DuoNotes.Infrastructure/DuoNotes.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/DuoNotes.Domain.Tests/DuoNotes.Domain.Tests.csproj" />
+  </Folder>
+</Solution>

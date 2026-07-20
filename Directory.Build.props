@@ -1,0 +1,31 @@
+<Project>
+
+  <!-- ตั้งค่าที่ทุกโปรเจกต์ใน solution นี้จะได้รับเหมือนกันหมด
+       ไม่ต้องไปก๊อปวางใน .csproj ทีละไฟล์ (คล้าย <parent> ใน pom.xml ของ Maven) -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+
+    <!-- บังคับให้ compiler เตือนเรื่อง null: ตัวแปรไหนเป็น null ได้ต้องเขียน string? ให้ชัด
+         ช่วยดัก NullReferenceException ตั้งแต่ตอน build แทนที่จะไประเบิดตอน runtime -->
+    <Nullable>enable</Nullable>
+
+    <!-- ไม่ต้องเขียน using System; using System.Linq; ซ้ำทุกไฟล์ -->
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <!-- ข้อนี้ดุที่สุดและสำคัญที่สุด: warning ทุกตัวถือเป็น error build ไม่ผ่าน
+         เพื่อไม่ให้ warning ค้างสะสมจนไม่มีใครสนใจ -->
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+
+    <!-- บังคับใช้กฎใน .editorconfig ตอน build ไม่ใช่แค่เตือนใน IDE -->
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+
+    <!-- จำเป็นต้องเปิด เพื่อให้กฎ IDE0005 (ตรวจ using ที่ไม่ได้ใช้) ทำงานตอน build ได้
+         ดู https://github.com/dotnet/roslyn/issues/41640 -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <!-- ผลข้างเคียงของบรรทัดบน: compiler จะเริ่มบ่น CS1591 ทุกครั้งที่ public member
+         ไม่มี XML comment (/// <summary>) ซึ่งเข้มเกินไปสำหรับโปรเจกต์นี้ จึงปิดเฉพาะตัวนี้ -->
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+
+</Project>
