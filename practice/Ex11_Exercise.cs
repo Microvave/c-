@@ -2,19 +2,14 @@
 #:property GenerateDocumentationFile=false
 #:property EnforceCodeStyleInBuild=false
 
-// ============================================================
-//  ข้อ 11 — โจทย์ของคุณ
-//  รัน:  dotnet run Ex11_Exercise.cs
-//  ดูตัวอย่างแนวทาง:  dotnet run Ex11_Example.cs
-// ------------------------------------------------------------
-//  โจทย์: รับข้อความที่อาจมีช่องว่างหน้า-หลัง  ตัดช่องว่างออก
-//         ทำเป็นตัวพิมพ์ใหญ่ แล้วเติม !     Shout("  hola  ") -> "HOLA!"
-//  ใบ้:  .Trim()  .ToUpper()  แล้วต่อ string ด้วย +  หรือใช้ $"{...}!"
-// ============================================================
+// ข้อ 11 — โจทย์: ตัดช่องว่าง ทำตัวพิมพ์ใหญ่ เติม ! ("  hola  " -> "HOLA!")
+
+
 
 static string Shout(string text)
 {
-    return "";   // TODO
+    string test = text.Trim().ToUpper();
+    return test +"!";   // TODO
 }
 
 

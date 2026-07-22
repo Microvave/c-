@@ -2,20 +2,19 @@
 #:property GenerateDocumentationFile=false
 #:property EnforceCodeStyleInBuild=false
 
-// ============================================================
-//  ข้อ 12 — โจทย์ของคุณ
-//  รัน:  dotnet run Ex12_Exercise.cs
-//  ดูตัวอย่างแนวทาง:  dotnet run Ex12_Example.cs
-// ------------------------------------------------------------
-//  โจทย์: รับชื่อเต็มคั่นด้วยช่องว่าง คืนอักษรแรกของแต่ละคำต่อกัน
-//         Initials("wave suksawat") -> "WS"
-//  ใบ้:  var parts = fullName.Split(' ');   ได้ array
-//        parts[0][0] คืออักษรตัวแรกของคำแรก  อย่าลืม ToUpper()
-// ============================================================
+// ข้อ 12 — โจทย์: คืนอักษรแรกของแต่ละคำต่อกัน ("wave suksawat" -> "WS")
+
 
 static string Initials(string fullName)
 {
-    return "";   // TODO
+    var parts = fullName.Split(' ');
+    string acc = "";
+    foreach(var p in parts)
+    {
+        acc += p[0];
+        
+    }
+    return acc.ToUpper();   // TODO
 }
 
 
