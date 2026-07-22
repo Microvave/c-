@@ -2,18 +2,18 @@
 #:property GenerateDocumentationFile=false
 #:property EnforceCodeStyleInBuild=false
 
-// ============================================================
-//  ข้อ 10 — โจทย์ของคุณ
-//  รัน:  dotnet run Ex10_Exercise.cs
-//  ดูตัวอย่างแนวทาง:  dotnet run Ex10_Example.cs
-// ------------------------------------------------------------
-//  โจทย์: 1 -> "จันทร์",  2 -> "อังคาร",  3 -> "พุธ",  อื่น ๆ -> "ไม่รู้จัก"
-//  ใบ้:  switch (day) { case 1: return "จันทร์"; ... default: return "ไม่รู้จัก"; }
-// ============================================================
+// ข้อ 10 — โจทย์: 1->"จันทร์" 2->"อังคาร" 3->"พุธ" อื่น ๆ->"ไม่รู้จัก"
 
 static string DayName(int day)
 {
-    return "";   // TODO
+    switch(day)
+    {
+        case 1 : return "จันทร์";
+        case 2 : return "อังคาร";
+        case 3 : return "พุธ";
+        default: return "ไม่รู้จัก";
+    }
+
 }
 
 

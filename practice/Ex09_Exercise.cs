@@ -2,18 +2,17 @@
 #:property GenerateDocumentationFile=false
 #:property EnforceCodeStyleInBuild=false
 
-// ============================================================
-//  ข้อ 9 — โจทย์ของคุณ
-//  รัน:  dotnet run Ex09_Exercise.cs
-//  ดูตัวอย่างแนวทาง:  dotnet run Ex09_Example.cs
-// ------------------------------------------------------------
-//  โจทย์: นับว่ามีกี่คำในลิสต์ที่ยาวเกิน minLength ตัวอักษร
-//  ใบ้:  ตัวแปรนับ + foreach + if
-// ============================================================
+// ข้อ 9 — โจทย์: นับว่ามีกี่คำในลิสต์ที่ยาวเกิน minLength ตัวอักษร
 
 static int CountLongerThan(List<string> words, int minLength)
 {
-    return 0;   // TODO
+    int count = 0;
+  
+    foreach(var x in words)
+    {
+        if(x.Length>minLength){count++;}
+    }
+    return count;   // TODO
 }
 
 

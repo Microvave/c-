@@ -2,19 +2,19 @@
 #:property GenerateDocumentationFile=false
 #:property EnforceCodeStyleInBuild=false
 
-// ============================================================
-//  ข้อ 8 — โจทย์ของคุณ
-//  รัน:  dotnet run Ex08_Exercise.cs
-//  ดูตัวอย่างแนวทาง:  dotnet run Ex08_Example.cs
-// ------------------------------------------------------------
-//  โจทย์: คืนคำที่ยาวที่สุดในลิสต์  ถ้าลิสต์ว่างให้คืน ""
-//  ใบ้:  foreach (var word in words) { ... }
-//        เทียบความยาวด้วย word.Length  (ไม่ใช่ .length() แบบ Java)
-// ============================================================
+// ข้อ 8 — โจทย์: คืนคำที่ยาวที่สุดในลิสต์ ถ้าลิสต์ว่างให้คืน ""
 
 static string LongestWord(List<string> words)
 {
-    return "";   // TODO
+    string best = "";
+    foreach(var x in words)
+    {
+        if(x.Length > best.Length)
+        {
+            best = x;
+        }
+    }
+    return best;   // TODO
 }
 
 
