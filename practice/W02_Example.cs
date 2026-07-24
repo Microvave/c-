@@ -9,7 +9,8 @@
 // ============================================================
 
 // nick เป็น null ได้ (string?)  ถ้า null ให้ใช้ค่าขวามือแทน
-static string Nickname(string? nick) => nick ?? "ไม่มีชื่อเล่น";
+static string Nickname(string? nick) 
+=> nick ?? "ไม่มีชื่อเล่น";
 
 Console.WriteLine();
 Console.WriteLine("=== Warmup 2 — ตัวอย่าง: Nickname ===");

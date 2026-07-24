@@ -2,12 +2,13 @@
 #:property GenerateDocumentationFile=false
 #:property EnforceCodeStyleInBuild=false
 
-// Warmup 1 — โจทย์: คืน "hola = สวัสดี (4 ตัวอักษร)" จาก VocabEntry
-//   ใช้ $"..." แทรก e.Term, e.Translation, และ e.Term.Length
+//Warmup 1 — โจทย์: คืน "hola = สวัสดี (4 ตัวอักษร)" จาก VocabEntry
+//ใช้ $"..." แทรก e.Term, e.Translation, และ e.Term.Length
 
 static string Describe(VocabEntry e)
 {
-    return "";   // TODO
+    
+    return  $"{e.Term} = {e.Translation} ({e.Term.Length} ตัวอักษร)"  ;// TODO
 }
 
 

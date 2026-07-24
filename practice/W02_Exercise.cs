@@ -7,7 +7,7 @@
 
 static string SafeNotes(VocabEntry e)
 {
-    return "";   // TODO
+    return e.Notes ?? "ไม่มีโน้ต";   // TODO
 }
 
 

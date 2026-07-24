@@ -7,7 +7,8 @@
 
 static int? NoteLength(VocabEntry e)
 {
-    return 0;   // TODO
+    
+    return e.Notes ?.Length;   // TODO
 }
 
 

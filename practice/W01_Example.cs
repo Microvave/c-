@@ -8,7 +8,8 @@
 //  *** แก้เสร็จแล้ว มีไว้ดูเป็นแนวทาง ***  โจทย์จริงอยู่ที่ W01_Exercise.cs
 // ============================================================
 
-static string FormatItem(string name, int price) => $"{name} ราคา {price} บาท";
+static string FormatItem(string name, int price) 
+=> $"{name} ราคา {price} บาท";
 
 Console.WriteLine();
 Console.WriteLine("=== Warmup 1 — ตัวอย่าง: FormatItem ===");
